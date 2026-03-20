@@ -29,45 +29,77 @@ precios_febrero <- c(1350, 1020, 920, 810, 2250, 4900, 1950, 2500)
 # --- Paso 2: Explorar los vectores ---
 
 # ¿cuántos productos tenemos?
+length(productos)
+length(precios_enero)
+length(precios_febrero)
 
 # ¿qué tipo de dato es?
+typeof(productos)
+typeof(precios_enero)
+typeof(precios_febrero)
 
 # --- Paso 3: Estadísticas descriptivas de cada mes ---
 
 # Enero
 # precio promedio
+mean(precios_enero)
 # producto más barato
+min(precios_enero)
 # producto más caro
+max(precios_enero)
 
-# Febrero: IDEM
+# Febrero
+# precio promedio
+mean(precios_febrero)
+# producto más barato
+min(precios_febrero)
+# producto más caro
+max(precios_febrero)
 
 # --- Paso 4: Calcular la variación de precios ---
 
 # variación absoluta en pesos
+mean(precios_febrero) - mean(precios_enero)
+variacion_absoluta <- precios_febrero - precios_enero
 
 # variación porcentual
+(precios_febrero - precios_enero)/precios_enero * 100
+variacion_porcentual <- variacion_absoluta / precios_enero * 100 # Puedo reutilizar un valor definido previamente
+
 # redondeado a 1 decimal
+variacion_porcentual_1 <- round(variacion_porcentual,digits = 2)
 
 # --- Paso 5: ¿Qué producto subió más? ---
 
-productos[which.max(variacion_pct)]    # nombre del producto
+productos[which.max(variacion_porcentual)]    # nombre del producto
 
 # porcentaje de suba
+variacion_porcentual[which.max(variacion_porcentual)]
 
 # ¿Y cuál subió menos?
-
+productos[which.min(variacion_porcentual)]    # nombre del producto
+productos[which.min(variacion_absoluta)]    # nombre del producto
+variacion_porcentual[which.min(variacion_porcentual)]
 
 # --- Paso 6: Armar un data frame con todo ---
-
+tabla <- data.frame(producto = productos,
+                    precio_enero = precios_enero,
+                    precio_febrero = precios_febrero,
+                    variacion_absoluta = variacion_absoluta,
+                    variacion_porcentual = variacion_porcentual)
 
 # ver la tabla completa
+View(tabla)
 
 # --- Paso 7: Filtrar productos que subieron más del 10% ---
+tabla[variacion_porcentual > 10,]
 
 # --- Paso 8: Costo total de la canasta en cada mes ---
+costo_enero <- sum(tabla$precio_enero)
+costo_febrero <- sum(tabla$precio_febrero)
 
 # ¿Inflación?
-
+inflacion_canasta <- (sum(tabla$precio_febrero) - sum(tabla$precio_enero))/sum(tabla$precio_enero) * 100
 paste0("La canasta subió un ", round(inflacion_canasta, 1), "% en un mes")
 
 # --- Paso 9: Guardar la info en una lista resumen ---
@@ -78,7 +110,7 @@ resumen <- list(
   costo_enero   = costo_enero,
   costo_febrero = costo_febrero,
   inflacion_pct = round(inflacion_canasta, 1),
-  producto_mas_suba = productos[which.max(variacion_pct)]
+  producto_mas_suba = productos[which.max(variacion_porcentual)]
 )
 
 resumen$inflacion_pct
