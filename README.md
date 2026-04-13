@@ -78,7 +78,7 @@ Cada clase tiene su propia carpeta dentro de `/clases/` con los siguientes archi
 | Fecha | Evento | Link |
 |---|---|---|
 | 13/03 | Inicio de clases — Presentación del curso | |
-| 17/04 | **Instancia 1** — Validación de base de datos e hipótesis | [Formulario 1](https://docs.google.com/forms/d/1rk-iEklDWILKR5eAS9CmdZiuW_alilUKEj8TaMesv0g/edit)| 
+| 23/04 | **Instancia 1** — Validación de base de datos e hipótesis | [Formulario 1](https://docs.google.com/forms/d/1rk-iEklDWILKR5eAS9CmdZiuW_alilUKEj8TaMesv0g/edit)| 
 | 26/05 | **Instancia 2** — Validación de métodos estadísticos | |
 | 12/06 | **Instancia 3** — Validación de visualizaciones | |
 | 23/06 | **Entrega final del TP** | |
