@@ -31,6 +31,7 @@ Las clases se organizan en dos instancias semanales:
 | Clases grabadas viejas | [Link a las clases](https://docs.google.com/spreadsheets/d/1qJqhNKqZBd8fF-mceK9HD0qxr4E0L953vhowUnWI-IM/edit?gid=1693566194#gid=1693566194) |
 | Recursos adicionales | [Link a los recursos](https://docs.google.com/spreadsheets/d/1iKuWU7Yc_EEUsqabAkBizfgksrgC1FhG1uCD0RJZB-Q/edit?gid=1608576266#gid=1608576266) |
 | Links a trabajos de cuatrimestres pasados | [Link a los recursos](https://drive.google.com/drive/u/0/folders/1_XlOJyPfR9wscOBrk-Ch9S0yKX7HbtfG) |
+| Ejemplo de códigos y carpetas | [Útil para TP](https://github.com/nsidicarocep/ejemplo_datos_empleo) |
 
 
 ### Materiales por clase
@@ -81,7 +82,7 @@ Cada clase tiene su propia carpeta dentro de `/clases/` con los siguientes archi
 |---|---|---|
 | 13/03 | Inicio de clases — Presentación del curso | |
 | 23/04 | **Instancia 1** — Validación de base de datos e hipótesis | [Formulario 1](https://docs.google.com/forms/d/1rk-iEklDWILKR5eAS9CmdZiuW_alilUKEj8TaMesv0g/edit)| 
-| 26/05 | **Instancia 2** — Validación de métodos estadísticos | |
+| 26/05 | **Instancia 2** — Validación de métodos estadísticos | [Formulario 2](https://docs.google.com/forms/d/18zSh4I3R-IKe9VdQaG-hUnFwf97hz3qHqBgx7flj564/viewform?edit_requested=true)| |
 | 12/06 | **Instancia 3** — Validación de visualizaciones | |
 | 23/06 | **Entrega final del TP** | |
 | 26/06 | **Segunda opción Entrega final del TP** | |
