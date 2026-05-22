@@ -92,6 +92,7 @@ expo_dest <- expo_dest %>%
 conc_destinos <- expo_dest %>% 
   group_by(i) %>% 
   summarize(n_destinos = n(),
+            cr1 = calcular_cr(share,1),
             cr4 = calcular_cr(share,4),
             cr8 = calcular_cr(share,8),
             hhi = calcular_hhi(share),
@@ -106,7 +107,7 @@ conc_destinos <- conc_destinos %>%
   arrange(desc(hhi))
 
 
-# ---- A.3 Visualización: top concentrados vs top diversificados -------------
+# ---- A.3 top concentrados vs top diversificados -------------
 
 # Filtro países con cierta escala mínima para evitar ruido (micro-exportadores)
 umbral_expo <- 10000  # 100 millones de USD (recordar: v está en miles)
@@ -154,7 +155,8 @@ expo_prod <- baci %>%
 
 # Generar niveles HS2 y HS4 a partir del HS6
 expo_prod <- expo_prod %>% 
-  mutate(hs2 = str_sub(k,1,2),
+  mutate(k = str_pad(k,6,'left',pad='0'),
+         hs2 = str_sub(k,1,2),
          hs4 = str_sub(k,1,4),
          hs6 = k)
 
