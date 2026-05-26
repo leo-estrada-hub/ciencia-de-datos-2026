@@ -24,7 +24,8 @@
 
 # ---- 0. Paquetes y rutas ---------------------------------------------------
 
-library(data.table)
+library(data.table) # Para leer: https://atrebas.github.io/post/2020-06-17-datatable-introduction/ 
+                    # https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html
 library(tidyverse)
 library(scales)
 library(fst)
@@ -46,7 +47,7 @@ productos <- fread(f_productos,
                    encoding = "UTF-8")
 setDT(baci)
 baci <- baci[!is.na(v) & v > 0]
-
+baci <- baci[,k := str_pad(k,6,'left',pad='0')]
 
 # ============================================================================
 # (A) VENTAJA COMPARATIVA REVELADA (RCA) DE BALASSA
@@ -106,7 +107,12 @@ desc_hs4 <- baci[
 ][
   , .(hs4 = str_sub(k, 1, 4), k, valor_mundial)
 ] |>
-  merge(productos, by.x = "k", by.y = "code", all.x = TRUE) |>
+  merge(productos %>% 
+          mutate(code = str_pad(code,6,'left',pad='0'),
+                 code = str_sub(code,1,4)) %>% 
+          group_by(code) %>% 
+          filter(row_number() == 1 )
+        , by.x = "hs4", by.y = "code", all.x = TRUE) |>
   group_by(hs4) |>
   slice_max(valor_mundial, n = 1, with_ties = FALSE) |>
   select(hs4, descripcion_hs4 = description) |>
