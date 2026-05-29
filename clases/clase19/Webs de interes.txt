@@ -1,0 +1,5 @@
+Seleccionar paletas : https://htmlcolorcodes.com/color-picker/ 
+Ver cosas de gráficos: https://www.data-to-viz.com/ 
+Inspiraciones para R: https://r-graph-gallery.com/ 
+Financial Times: https://github.com/Financial-Times/chart-doctor/blob/main/visual-vocabulary/Visual-vocabulary-es.pdf 
+Cheatsheet: https://rstudio.github.io/cheatsheets/data-visualization.pdf 

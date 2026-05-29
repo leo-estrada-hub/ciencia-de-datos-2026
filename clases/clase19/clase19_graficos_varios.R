@@ -107,28 +107,42 @@ bm_idx <- bm |>
   mutate(indice = valor / valor[anio == anio_base] * 100) |>
   ungroup()
 
-ggplot(bm_idx, aes(anio, indice, color = pais)) +
+grafico_1 <- ggplot(bm_idx, # Base de datos  
+       aes(anio, indice, # Eje X y Y
+           )) +
+  # Definir las lineas y segmentos de interes 
   geom_hline(yintercept = 100, linetype = "dashed", color = "gray50") +
-  geom_line(linewidth = 0.9) +
-  geom_point(size = 1.1) +
+  geom_vline(xintercept = 2009, linetype = 'dashed',color='gray50') + 
+  geom_vline(xintercept = 2020, linetype = 'dashed',color='gray50') +
+  annotate("rect", xmin = 2019, xmax = 2021, ymin = 100, ymax = 370,
+           alpha = 0.08, fill = "gray50", color = "gray50") +
+  # Definir los elementos principales
+  geom_line(linewidth = 0.9,aes(color = pais)) +
+  geom_point(size = 1.1,aes(color = pais)) +
+  # Filtrar por 2015 para mostrar ese año 
+  geom_point(data = bm_idx %>% filter(anio == 2015),
+             color = 'black') + 
+  # Definir paleta y cosas estéticas
   scale_color_brewer(palette = "Set1") +
   labs(
     title    = "PBI per cápita en perspectiva (1990 = 100)",
     subtitle = "Misma base para todos: la pendiente es la tasa de crecimiento acumulado.",
-    x = NULL, y = "Índice (1990 = 100)", color = NULL,
+    x = NULL, y = "Índice (1990 = 100)", # color = NULL
     caption  = "Fuente: Banco Mundial, NY.GDP.PCAP.KD (API REST, sin el paquete WDI)."
-  )
-
-
+  ) + 
+  theme(legend.title = element_blank())
+# Convertir grafico en interactivo 
+plotly::ggplotly(grafico_1)
 # =============================================================================
 # 2) BOXPLOT + VIOLÍN  —  Fuente: OWID
 # =============================================================================
 
 ggplot(owid_2022 |> filter(!is.na(co2_pc)),
        aes(continente, co2_pc, fill = continente)) +
-  geom_violin(alpha = 0.5, color = NA, show.legend = FALSE) +
   geom_boxplot(width = 0.15, fill = "white", alpha = 0.8,
                outlier.alpha = 0.4, show.legend = FALSE) +
+  geom_jitter(alpha=0.2) + 
+  geom_violin(alpha = 0.5, color = NA, show.legend = FALSE) +
   scale_fill_manual(values = paleta_cont) +
   labs(
     title    = "Distribución de emisiones de CO2 per cápita por continente, 2022",
