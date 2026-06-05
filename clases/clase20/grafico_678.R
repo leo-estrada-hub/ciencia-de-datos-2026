@@ -167,7 +167,7 @@ ggsave("clase21_brechas_dumbbell_editorializado.png", g_gap,
 # =============================================================================
 
 med_1952 <- median(filter(gapminder, year == 1952)$lifeExp)
-
+med_2007 <- median(filter(gapminder, year == 2007)$lifeExp)
 g_ridge <- ggplot(gapminder, aes(x = lifeExp, y = factor(year))) +
   
   # densidades apiladas, con relleno graduado segun el valor (refuerza el eje x)
@@ -181,7 +181,14 @@ g_ridge <- ggplot(gapminder, aes(x = lifeExp, y = factor(year))) +
   annotate("text", x = med_1952, y = Inf, vjust = 1.5, hjust = -0.05,
            label = "Mediana mundial\nen 1952", colour = "#6b6b6b",
            size = 2.9, lineheight = 0.9) +
+# Linea de referencia en 2007
+  geom_vline(xintercept = med_2007, linetype = "dashed",
+             colour = "#6b6b6b", linewidth = 0.4) +
+  annotate("text", x = med_2007, y = Inf, vjust = 1.5, hjust = -0.05,
+           label = "Mediana mundial\nen 2007", colour = "#6b6b6b",
+           size = 2.9, lineheight = 0.9) +
   
+    
   scale_fill_gradient(low = "#d3e1f0", high = owid_azul, guide = "none") +
   scale_y_discrete(expand = expansion(add = c(0.2, 2.4))) +
   scale_x_continuous(breaks = seq(30, 90, 15)) +

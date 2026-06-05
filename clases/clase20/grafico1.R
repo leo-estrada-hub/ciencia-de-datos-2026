@@ -27,12 +27,12 @@ library(gapminder)   # datos de ejemplo (reemplazar por base de Argendata)
 # (Opcional) tipografia tipo OWID. Requiere sysfonts + showtext:
 # library(showtext); font_add_google("Lato", "lato"); showtext_auto()
 # y luego usar base_family = "lato" dentro de theme_owid().
-
+source('tema.R')
 
 # -----------------------------------------------------------------------------
 # 0) PALETA Y TEMA REUTILIZABLES  <- esto es lo que mas vas a reusar
 # -----------------------------------------------------------------------------
-owid_azul   <- "#4C6A9C"
+owid_azul   <- "#4A8A9C"
 owid_rojo   <- "#B13507"
 owid_verde  <- "#578145"
 owid_morado <- "#6D3E91"
@@ -63,8 +63,12 @@ theme_owid <- function(base_size = 13, base_family = "") {
 
 
 # -----------------------------------------------------------------------------
+# Comentario Chat: 
 # 1) DATOS  <- REEMPLAZAR por tu base de Argendata
 #    Patron: una columna "grupo" que distingue protagonistas vs "Otros".
+# 
+#Comentario real: 
+# Selección de casos de contexto
 # -----------------------------------------------------------------------------
 protagonistas <- c("Argentina", "Korea, Rep.")
 contexto      <- c("Brazil", "Chile", "Mexico")

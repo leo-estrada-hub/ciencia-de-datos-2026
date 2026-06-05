@@ -125,7 +125,7 @@ hist_df <- gapminder %>% filter(year == 2007)
 
 mediana_y <- median(hist_df$gdpPercap)
 media_y   <- mean(hist_df$gdpPercap)
-fmt <- label_dollar(prefix = "US$ ", big.mark = ".", accuracy = 1)
+fmt <- label_dollar(prefix = "US$ ", big.mark = ".", decimal.mark = ",", accuracy = 1)
 
 titulo_hist <- sprintf(
   "La <span style='color:%s'>**media**</span> queda muy por encima de la <span style='color:%s'>**mediana**</span>: el ingreso mundial esta sesgado",
@@ -158,7 +158,7 @@ annotate("text", x = 38000, y = 14, hjust = 0,
            arrow = arrow(length = unit(2.2, "mm"), type = "closed")) +
   
   # (d) ESCALAS ---------------------------------------------------------------
-scale_x_continuous(labels = label_dollar(prefix = "US$ ", big.mark = ".")) +
+scale_x_continuous(labels = label_dollar(prefix = "US$ ", big.mark = ".", decimal.mark = ",")) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
   
   # (e) TITULO, SUBTITULO, FUENTE Y TEMA --------------------------------------
@@ -183,7 +183,7 @@ g_dens <- ggplot(hist_df, aes(gdpPercap)) +
   geom_vline(xintercept = mediana_y, colour = owid_azul, linewidth = 0.6) +
   geom_vline(xintercept = media_y, colour = owid_rojo,
              linewidth = 0.6, linetype = "dashed") +
-  scale_x_continuous(labels = label_dollar(prefix = "US$ ", big.mark = ".")) +
+  scale_x_continuous(labels = label_dollar(prefix = "US$ ", big.mark = ".", decimal.mark = ",")) +
   scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
   labs(title = titulo_hist,
        subtitle = "Densidad del PBI per capita entre paises (PPA), 2007",

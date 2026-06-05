@@ -54,7 +54,8 @@ theme_owid <- function(base_size = 13, base_family = "") {
 barras <- gapminder %>%
   filter(continent == "Americas", year == 2007) %>%
   mutate(
-    pais = recode(country, "United States" = "Estados Unidos"),
+    pais = recode(country, "United States" = "Estados Unidos",'Brasil'='Brazil','República Dominicana'='Dominican Republic',
+                  'Trinidad y Tobago' = 'Trinidad and Tobago'),
     destacar = if_else(country == "Argentina", "Argentina", "Otros"),
     pais = fct_reorder(pais, gdpPercap)          # ordenar de menor a mayor
   )
@@ -65,7 +66,7 @@ col_fill <- c("Argentina" = owid_azul, "Otros" = owid_gris)
 col_text <- c("Argentina" = owid_azul, "Otros" = "#7a7a7a")
 
 titulo_barras <- sprintf(
-  "En ingreso por habitante, la <span style='color:%s'>**Argentina**</span> quedo en mitad de tabla en America",
+  "En ingreso por habitante, la <span style='color:%s'>**Argentina**</span> quedo por encima del promedio de America",
   owid_azul)
 
 g_barras <- ggplot(barras, aes(gdpPercap, pais, fill = destacar)) +
@@ -83,7 +84,7 @@ geom_text(aes(label = label_dollar(prefix = "US$ ", big.mark = ".",
   # (c) LINEA DE REFERENCIA: promedio regional + anotacion --------------------
 geom_vline(xintercept = prom_region, linetype = "dashed",
            colour = "#6b6b6b", linewidth = 0.4) +
-  annotate("text", x = prom_region, y = Inf, vjust = 1.4, hjust = -0.06,
+  annotate("text", x = prom_region, y = 'Nicaragua', vjust = 1.4, hjust = -0.06,
            label = "Promedio regional", colour = "#6b6b6b", size = 3) +
   
   # (d) ESCALAS Y COLORES -----------------------------------------------------
