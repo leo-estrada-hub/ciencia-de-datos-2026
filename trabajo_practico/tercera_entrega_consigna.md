@@ -28,7 +28,9 @@ Junto a las visualizaciones, deberán presentar un análisis descriptivo de las 
 
 ## Formato de entrega
 
-Deberán enviar un **archivo comprimido (.zip o .rar)** que contenga las dos visualizaciones y la presentación con el análisis descriptivo. El archivo debe llamarse:
+Deberán enviar un **archivo comprimido (.zip o .rar)** que contenga las dos visualizaciones y la presentación con el análisis descriptivo. También deberá contener el código con el que arman las estadísticas descriptivas y los dos códigos (debe ser uno por gráfico) que generan los gráficos. Seguir los criterios del curso del uso de la IA para los códigos (uso asistencial, que no sea realizado enteramente por la IA). 
+
+El archivo debe llamarse:
 
 `tercera_entrega_[NUMERO DE GRUPO].zip` o `tercera_entrega_[NUMERO DE GRUPO].rar`
 
@@ -50,3 +52,4 @@ El martes 9/06 se va a utilizar el tiempo de clase para realizar los gráficos c
 - Capacidad de utilizar estadísticas descriptivas
 - Interpretación de las estadísticas descriptivas
 - Prolijidad y coherencia visual de los gráficos
+- Prolijidad y sentido de los códigos entregados 
