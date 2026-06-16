@@ -25,14 +25,14 @@ Las clases se organizan en dos instancias semanales:
 | Recurso | Link |
 |---|---|
 | Cronograma del curso | [Link al cronograma](https://docs.google.com/spreadsheets/d/1iKuWU7Yc_EEUsqabAkBizfgksrgC1FhG1uCD0RJZB-Q/edit) |
-| Consignas del Trabajo Práctico | [Link al TP]([URL_TP](https://github.com/nsidicarocep/curso_cdd_fce_uba_1c2026/tree/main/trabajo_practico)) |
+| Consignas del Trabajo Práctico | [Link al TP](https://github.com/nsidicarocep/curso_cdd_fce_uba_1c2026/tree/main/trabajo_practico) |
 | Bibliografía completa | [Link a bibliografía](https://docs.google.com/spreadsheets/d/1iKuWU7Yc_EEUsqabAkBizfgksrgC1FhG1uCD0RJZB-Q/edit?gid=283594947#gid=283594947) |
 | Clase virtual de los viernes | [Link a la clase](https://teams.microsoft.com/l/meetup-join/19%3ameeting_ZDA1Yjc2ZTMtNTk2NC00MDI0LWFiMWUtNTMyZWZhYTUxMjcy%40thread.v2/0?context=%7b%22Tid%22%3a%224c818f79-ab84-4552-9b7c-2fe715b0d0d5%22%2c%22Oid%22%3a%2277f0ea96-2e96-4a71-85cd-f693c7e6c2cd%22%7d) |
 | Clases grabadas viejas | [Link a las clases](https://docs.google.com/spreadsheets/d/1qJqhNKqZBd8fF-mceK9HD0qxr4E0L953vhowUnWI-IM/edit?gid=1693566194#gid=1693566194) |
 | Recursos adicionales | [Link a los recursos](https://docs.google.com/spreadsheets/d/1iKuWU7Yc_EEUsqabAkBizfgksrgC1FhG1uCD0RJZB-Q/edit?gid=1608576266#gid=1608576266) |
 | Links a trabajos de cuatrimestres pasados | [Link a los recursos](https://drive.google.com/drive/u/0/folders/1_XlOJyPfR9wscOBrk-Ch9S0yKX7HbtfG) |
 | Ejemplo de códigos y carpetas | [Útil para TP](https://github.com/nsidicarocep/ejemplo_datos_empleo) |
-
+| Guía para el Readme | [Útil para TP](https://github.com/nsidicarocep/curso_cdd_fce_uba_1c2026/blob/main/trabajo_practico/guia_readme.md) |
 
 ### Materiales por clase
 
@@ -83,10 +83,11 @@ Cada clase tiene su propia carpeta dentro de `/clases/` con los siguientes archi
 | 13/03 | Inicio de clases — Presentación del curso | |
 | 23/04 | **Instancia 1** — Validación de base de datos e hipótesis | [Formulario 1](https://docs.google.com/forms/d/1rk-iEklDWILKR5eAS9CmdZiuW_alilUKEj8TaMesv0g/edit)| 
 | 26/05 | **Instancia 2** — Validación de métodos estadísticos | [Formulario 2](https://docs.google.com/forms/d/18zSh4I3R-IKe9VdQaG-hUnFwf97hz3qHqBgx7flj564/viewform?edit_requested=true)| |
-| 12/06 | **Instancia 3** — Validación de visualizaciones | |
-| 23/06 | **Entrega final del TP** | |
+| 12/06 | **Instancia 3** — Validación de visualizaciones | [Consignas](https://github.com/nsidicarocep/curso_cdd_fce_uba_1c2026/blob/main/trabajo_practico/tercera_entrega_consigna.md)|
+| 23/06 | **Entrega final del TP** | [Consigna TP](https://github.com/nsidicarocep/curso_cdd_fce_uba_1c2026/blob/main/trabajo_practico/consigna_entrega_final.md) |
 | 26/06 | **Segunda opción Entrega final del TP** | |
-| 30/06 y 03/07 | **Recuperatorios y TP opcional de Web Scraping** | |
+| 30/06 | **Tercera opción Entrega final del TP** | |
+| 03/07 y 07/07 | **Presentaciones y recuperatorios** | |
 | 24/03, 03/04, 01/05 | Feriados | |
 
 Las tres instancias intermedias son de carácter formativo: permiten recibir devolución y corregir el rumbo antes de la entrega final.
