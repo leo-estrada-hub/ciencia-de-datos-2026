@@ -33,6 +33,8 @@ Las clases se organizan en dos instancias semanales:
 | Links a trabajos de cuatrimestres pasados | [Link a los recursos](https://drive.google.com/drive/u/0/folders/1_XlOJyPfR9wscOBrk-Ch9S0yKX7HbtfG) |
 | Ejemplo de códigos y carpetas | [Útil para TP](https://github.com/nsidicarocep/ejemplo_datos_empleo) |
 | Guía para el Readme | [Útil para TP](https://github.com/nsidicarocep/curso_cdd_fce_uba_1c2026/blob/main/trabajo_practico/guia_readme.md) |
+| Encuesta fin de curso | [Link](https://forms.gle/nA767J6W6mt6aQE29) |
+| Formulario Web Scraping | [Link](https://forms.gle/w4NDL3bGLV3xJRpq7) |
 
 ### Materiales por clase
 
