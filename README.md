@@ -35,6 +35,7 @@ Las clases se organizan en dos instancias semanales:
 | Guía para el Readme | [Útil para TP](https://github.com/nsidicarocep/curso_cdd_fce_uba_1c2026/blob/main/trabajo_practico/guia_readme.md) |
 | Encuesta fin de curso | [Link](https://forms.gle/nA767J6W6mt6aQE29) |
 | Formulario Web Scraping | [Link](https://forms.gle/w4NDL3bGLV3xJRpq7) |
+| Notas finales | [Link](https://docs.google.com/spreadsheets/d/1YUOlGuDZUoR1dQ4agd7kBz2RquKSEHu135pPZxIxsto/edit?gid=0#gid=0) |
 
 ### Materiales por clase
 
