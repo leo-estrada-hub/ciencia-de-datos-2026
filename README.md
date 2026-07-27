@@ -36,6 +36,7 @@ Las clases se organizan en dos instancias semanales:
 | Encuesta fin de curso | [Link](https://forms.gle/nA767J6W6mt6aQE29) |
 | Formulario Web Scraping | [Link](https://forms.gle/w4NDL3bGLV3xJRpq7) |
 | Notas finales | [Link](https://docs.google.com/spreadsheets/d/1YUOlGuDZUoR1dQ4agd7kBz2RquKSEHu135pPZxIxsto/edit?gid=0#gid=0) |
+| Clases grabadas Scraping | [Link](https://drive.google.com/drive/u/0/folders/1DjDFl5Al-Q6gj5_GwpICD1Hl9ZmA3WmP) |
 
 ### Materiales por clase
 
